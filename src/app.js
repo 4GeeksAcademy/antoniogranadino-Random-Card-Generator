@@ -1,11 +1,50 @@
-/* eslint-disable */
-import "bootstrap";
 import "./style.css";
+const letterOfCard = [
+  "A",
+  "J",
+  "Q",
+  "K",
+  "10",
+  "9",
+  "8",
+  "7",
+  "6",
+  "5",
+  "4",
+  "3",
+  "2"
+];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+const trumps = [
+  '<i class="bi bi-suit-heart-fill" style="color: red;"></i>',
+  '<i class="bi bi-suit-spade-fill"></i>',
+  '<i class="bi bi-suit-club-fill"></i>',
+  '<i class="bi bi-suit-diamond-fill" style="color: red;"></i>'
+];
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  const randomCard = document.getElementById("card");
+  let letter = letterOfCard[Math.floor(Math.random() * letterOfCard.length)];
+  let trump = trumps[Math.floor(Math.random() * trumps.length)];
+
+  const card2 = `
+  <div class="container-fluid">
+    <div class="row">
+        <div class="card" style="width: 400px;">
+            <div class="d-flex justify-content-start fs-1 h-2">
+                ${trump}
+            </div>
+            <div class="d-flex justify-content-center">
+                <h1>${letter}</h1>
+            </div>
+            <div class="d-flex justify-content-end fs-1">
+                <div class="rotate-icon-custom">
+                ${trump}
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  `;
+  randomCard.innerHTML = card2;
 };
