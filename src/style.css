@@ -1,4 +1,1 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-.rotate-icon-custom > i {
-  transform: rotate(180deg) !important;
-}

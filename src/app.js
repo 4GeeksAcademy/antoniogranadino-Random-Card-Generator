@@ -1,4 +1,3 @@
-import "./style.css";
 const letterOfCard = [
   "A",
   "J",
@@ -31,16 +30,16 @@ window.onload = function() {
   <div class="container-fluid">
     <div class="row">
         <div class="card" style="width: 400px;">
-            <div class="d-flex justify-content-start fs-1 h-2">
+            <div class="d-flex justify-content-start fs-1 h-2 mb-5">
                 ${trump}
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center m-5 p-5">
                 <h1>${letter}</h1>
             </div>
-            <div class="d-flex justify-content-end fs-1">
-                <div class="rotate-icon-custom">
+            <div class="d-flex justify-content-end fs-1 mt-5">
+                <span style ="transform:rotate(180deg)">
                 ${trump}
-                </div>
+                </span>
             </div>
         </div>
     </div>
